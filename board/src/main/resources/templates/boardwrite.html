@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 작성폼</title>
+</head>
+
+<style>
+    .layout{
+    width : 500px;
+    margin : 0 auto;
+    margin-top : 40px;
+    }
+
+    .layout input{
+    width : 100%;
+    box-sizing : border-box;
+    }
+
+    .layout textarea{
+    width : 100%;
+    margin-top : 10px;
+    min-height : 300px;
+    }
+
+</style>
+
+<body>
+<div class="layout">
+    <form action="/board/writepro" method="post"> <!-- 데이터를 어디로, 어떤 방식으로 전송할지-->
+        <input name="title" type="text">
+        <textarea name="content"></textarea>
+        <button type="submit">작성</button>  <!--submit : 버튼을 누르면 form 태그 안의 데이터를 전송함-->
+    </form>
+</div>
+</body>
+</html>
