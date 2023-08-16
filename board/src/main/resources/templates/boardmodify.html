@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www/thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>게시물 작성폼</title>
+  <meta charset="UTF-8">
+  <title>게시물 작성폼</title>
 </head>
 
 <style>
@@ -27,11 +27,11 @@
 
 <body>
 <div class="layout">
-    <form th:action="@{/board/update/{id}(id=${board.id})}" method="post"> <!-- 데이터를 어디로, 어떤 방식으로 전송할지-->
-        <input name="title" type="text" th:value="${board.title}">
-        <textarea name="content" th:text="${board.content}"></textarea>
-        <button type="submit">수정</button>  <!--submit : 버튼을 누르면 form 태그 안의 데이터를 전송함-->
-    </form>
+  <form th:action="@{/board/update/{id}(id=${board.id})}" method="post"> <!-- 데이터를 어디로, 어떤 방식으로 전송할지-->
+    <input name="title" type="text" th:value="${board.title}">
+    <textarea name="content" th:text="${board.content}"></textarea>
+    <button type="submit">수정</button>  <!--submit : 버튼을 누르면 form 태그 안의 데이터를 전송함-->
+  </form>
 </div>
 </body>
 </html>
