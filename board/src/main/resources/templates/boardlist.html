@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>게시글 리스트 페이지</title>
+    <link rel="stylesheet" th:href="@{/css/boardlist.css}">
 </head>
 
 <style>
@@ -14,6 +15,7 @@
 </style>
 
 <body>
+  <div><button><a th:href="@{/board/write}">글쓰기</a></button> </div>
   <div class="layout">
     <table>
       <thead>
@@ -25,12 +27,13 @@
       <tbody>
         <tr th:each="board : ${list}"> <!--each : 반복문, list에서 board가 없어질 때 까지-->
           <td th:text="${board.id}">1</td>
-            <td>
-              <a th:text="${board.title}" th:href="@{/board/view(id=${board.id})}"></a>
-            </td>
+          <td>
+            <a th:text="${board.title}" th:href="@{/board/view(id=${board.id})}"></a>
+          </td>
         </tr>
       </tbody>
     </table>
+
   </div>
 </body>
 </html>
