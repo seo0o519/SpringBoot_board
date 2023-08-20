@@ -28,8 +28,8 @@
 <body>
 <div class="layout">
   <form action="/board/writepro" method="post" enctype="multipart/form-data"> <!-- 데이터를 어디로, 어떤 방식으로 전송할지-->
-    <input name="title" type="text">
-    <textarea name="content"></textarea>
+    <input value="제목을 입력하세요."name="title" type="text" placeholder="제목을 입력하세요.">
+    <textarea name="content" placeholder="내용을 입력하세요."></textarea>
     <input type="file" name="file"> <!-- name의 값과 controller의 매개변수 MultipartFile의 이름과 일치시켜야 함-->
     <button type="submit">작성</button><!--submit : 버튼을 누르면 form 태그 안의 데이터를 전송함-->
     <button><a th:href="@{/board/list}">취소</a></button>
